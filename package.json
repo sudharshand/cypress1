@@ -1,0 +1,29 @@
+{
+  "name": "inx.shakedown.cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "ntlm-proxy": "start /min \"ntlm-proxy\" cmd /c node_modules\\.bin\\ntlm-proxy",
+    "cypress-ntlm": "npm run ntlm-proxy && (cypress-ntlm open & ntlm-proxy-exit)",
+    "cypress-record": "npm run ntlm-proxy && (cypress-ntlm run --record --key b9bbc278-0a66-4aad-bb0a-514b333de843 & ntlm-proxy-exit)",
+    "wait-on-server": "node wait-on-server.js",
+    "cypress-ntlm-ci": "npm run ntlm-proxy && (cypress-ntlm run --headless --browser chrome & ntlm-proxy-exit)",
+    "cypress-ntlm-ci-record": "npm run ntlm-proxy && (cypress-ntlm run --headless --browser chrome --record --key b9bbc278-0a66-4aad-bb0a-514b333de843 & ntlm-proxy-exit)"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^5.6.0",
+    "cypress-file-upload": "^4.1.1",
+    "cypress-iframe": "^1.0.1",
+    "cypress-ntlm-auth": "^2.2.5",
+    "cypress-wait-until": "^1.7.1",
+    "httpntlm": "^1.7.7",
+    "typescript": "^4.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://inx-software@dev.azure.com/inx-software/INX-Git/_git/INX.Shakedown.Cypress"
+  },
+  "description": ""
+}

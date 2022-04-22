@@ -1,0 +1,53 @@
+{
+    "eventTypeName": "Automation Test Event Type1",
+    "inactiveEventTypeName": "Inactive Event Type",
+    "eventCategoryName": "SHE",
+    "inactiveEventCategoryName": "Inactive Event Category",
+    "inactiveEventSubTypeName": "Inactive Event Sub Type",
+    "workflowSecurityRole": [ 
+        "Action Approver",
+        "Event Approver",
+        "Event Reader",
+        "Event Report Manager",
+        "Investigation Manager",
+        "Moderator",
+        "Submitter",
+        "Event Actionee"
+    ],
+    "workflowStep": [ 
+        "SUBMITTED",
+        "ASSIGNED",
+        "FINALREVIEW",
+        "CLOSED",
+        "CANCELLED"
+    ],
+    "workflowAttributeTabNames": [
+        "EventActions",
+        "EventDocuments",
+        "EventEquipments",
+        "EventKeywords",
+        "EventCauses",
+        "EventNotifications",
+        "EventInvestigations",
+        "EventEnvironmentalImpacts",
+        "EventInjuries",
+        "EventHazards",
+        "EventParticipants",
+        "EventChecklist",
+        "EventCosting",
+        "EventFireExplosions",
+        "EventMotorVehicles",
+        "EventWeathers",
+        "EventMarines",
+        "EventRegisterItems",
+        "RelatedEvents",
+        "EventDetails",
+        "EventCloseOut",
+        "EventWorkflowSummary",
+        "EventFindings",
+        "EventCommunications",
+        "EventInsurance",
+        "EventPdfForms",
+        "EventObligationConditions"
+    ]
+}

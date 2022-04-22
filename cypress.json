@@ -1,0 +1,21 @@
+{
+  "baseUrl": "https://v515-daily-azure.inxdev.com/",
+  "supportFile": "cypress/support/index.ts",
+  "projectId": "naacv6",
+  "chromeWebSecurity": false,
+  "env": {
+    "userDomain": "inxdev",
+    "userAccounts": {
+      "tr10": "Training10", 
+      "ta1" : "Automation1",
+      "ta2" : "Automation2",
+      "ta3" : "Automation3",
+      "ta4" : "Automation4",
+      "ta5" : "Automation5",
+      "ta6" : "Automation6",
+      "ta7" : "Automation7",
+      "ta8" : "Automation8",
+      "ta9" : "Automation9"
+    }
+  }
+}

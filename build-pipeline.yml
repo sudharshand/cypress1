@@ -1,0 +1,32 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  name: 'INXOnPrem'
+
+steps:
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '$(Build.SourcesDirectory)'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.SourcesDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.StagingDirectory)/INX.Shakedown.Cypress.zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.StagingDirectory)'
+    ArtifactName: 'INX.Shakedown.Cypress'
+    publishLocation: 'FilePath'
+    TargetPath: 'D:\\BuildArtifacts'
+    FileCopyOptions: '/purge'
